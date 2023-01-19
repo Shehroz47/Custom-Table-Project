@@ -1,13 +1,259 @@
-body {
+@import url("https://fonts.googleapis.com/css2?family=Moon+Dance&display=swap");
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  font-family: sans-serif;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  background-color: #f8f8f9;
+}
+
+/* Table */
+.table-container {
+  width: 95%;
+  margin: 0 auto;
+  margin-top: 60px;
+  margin-bottom: 32px;
+  overflow-x: auto;
+}
+
+.search-bar {
+  min-width: 873px;
+}
+
+.search-bar label {
+  font-weight: bold;
+}
+
+.search-bar input {
+  background: white
+    url("https://upload.wikimedia.org/wikipedia/commons/7/7e/Vector_search_icon.svg")
+    no-repeat 13px center;
+  width: 100%;
+  min-width: 837px;
+  padding: 20px 4px 20px 40px;
+  border: none;
+  outline: none;
+}
+
+.user-table {
+  width: 100%;
+  min-width: 873px;
+  margin-top: -7px;
+  table-layout: fixed;
+  border-collapse: separate;
+  border-spacing: 0 7px;
+}
+
+thead {
+  background: #ededf3;
+  color: #5b5b72;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+thead .user-table-cell:nth-child(1) {
+  border-bottom-left-radius: 10px;
+}
+thead .user-table-cell:last-child {
+  border-bottom-right-radius: 10px;
+}
+
+.user-table-cell {
+  padding: 18px 0;
+  text-align: center;
+  font-size: 15px;
+  word-wrap: break-word;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.user-table-cell span {
+  font-size: 11px;
+}
+
+.user-table-body-cell {
+  padding: 18px 0;
+  text-align: center;
+  word-wrap: break-word;
+}
+
+.user-table-body-cell:nth-child(1) {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  font-size: 16px;
+}
+
+.user-table-body-cell .companyName {
+  margin-bottom: 10px;
+}
+
+.companyName {
+  color: #5b5b72;
+}
+.customerName {
+  color: #5b5b72ab;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.customer-columns {
+  display: inline-block;
+  text-align: left;
+}
+.dateWithIcon {
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  margin-right: 23px;
+}
+.blueIcon p:first-child {
+  color: #6e4ce9;
+  font-size: 15px;
+}
+.greenIcon p:first-child {
+  color: #28bb7c;
+  font-size: 15px;
+}
+
+.greenIcon p:last-child {
+  width: 43px;
+}
+.blueIcon p:last-child {
+  width: 43px;
+}
+
+.amount {
+  color: #5b5b72;
+}
+
+.amount-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: center;
+}
+.action-container {
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+  justify-content: base-line;
+  gap: 20px;
+  padding: 4px;
+}
+
+.user-table-body-row {
+  color: #5b5b72;
+  background-color: white;
+  box-shadow: 1px 1px 10px #eee;
+  font-size: 14px;
+  border-radius: 10px;
+}
+
+.user-table-body-cell:last-child {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.user-table-body-row:hover {
+  background: #e8e8e8;
+}
+
+/* action button */
+
+.dropbtn {
+  cursor: pointer;
+  color: #bfbfbf;
+  font-size: 25px;
+  margin-right: -34px;
+}
+
+.user-table-cell:last-child {
+  width: 40px;
+  padding: 0px 0;
+  text-align: initial;
+  font-size: initial;
+  word-wrap: initial;
+  font-weight: initial;
+  line-height: initial;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  width: 50px;
+  background-color: white;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  padding: 4px;
+}
+
+/* button inside the dropdown */
+
+.action-buttons button {
+  cursor: pointer;
+  margin: 3px;
+  border: none;
+  background-color: transparent;
+  font-size: 16px;
+  border: none;
+}
+
+.action-buttons .delete-button {
+  color: #da5555;
+}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-left: 10px;
+}
+
+/* view page */
+
+.view-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin-top: -50px;
+  gap: 100px;
+}
+
+.view-page img {
+  width: 200px;
+  height: 200px;
+  margin-top: 100px;
+}
+
+.view-page-wrapper {
+  width: 400px;
+}
+.view-page-wrapper span {
+  font-family: "Moon Dance", cursive;
+  color: #00bcc5;
+}
+
+.view-page-wrapper p {
+  margin: 5px 0px 20px 0;
+}
+
+.view-page-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.view-page-footer button {
+  background: black;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  cursor: pointer;
 }
