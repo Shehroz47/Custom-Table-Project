@@ -6,16 +6,14 @@ import { OrderType } from "../store/FrontendTaskMockOrdersData";
 
 const initialState = orders;
 
-// createSlice and state, reducer function, that create action and type
 const tableSlice = createSlice({
   name: "table",
-  initialState, // order [{},{}]
+  initialState,
   reducers: {
     deleteOrder: (state, action: PayloadAction<string | undefined>) => {
       return state.filter((item) => item.orderID !== action.payload);
     },
 
-    // payloadAction type
     sortingOrder: (state, action: PayloadAction<OrderType[]>) => {
       return (state = action.payload);
     },

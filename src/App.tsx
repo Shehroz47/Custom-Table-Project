@@ -1,7 +1,4 @@
 import "./App.css";
-
-// It allows us to write HTML code directly in our React project.
-//Using TypeScript with React provides better IntelliSense and code completion for JSX.
 import React from "react";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";

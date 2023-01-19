@@ -15,9 +15,6 @@ export function TableHeader({
     <thead>
       <tr>
         {columns.map((column: ColumnType) => {
-          //  //columns [{field: "", title}, {}, {}]
-
-          // sorting = {column: "orderID", order: "asc"}
           const isDesc =
             sorting.column === column.field && sorting.order === "desc";
           const isAsc =
@@ -25,7 +22,7 @@ export function TableHeader({
           const futureSortingValue = isDesc ? "asc" : "desc";
 
           return (
-            <th // table header cells
+            <th
               key={column.field}
               className="user-table-cell"
               onClick={() =>

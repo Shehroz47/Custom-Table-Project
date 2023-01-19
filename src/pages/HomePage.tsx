@@ -4,7 +4,9 @@ import { Link } from "react-router-dom";
 export function HomePage() {
   return (
     <div>
-      <Link to="/orders">go to orders</Link>
+      <h1 className="home-order-link">
+        <Link to="/orders">go to orders</Link>
+      </h1>
     </div>
   );
 }

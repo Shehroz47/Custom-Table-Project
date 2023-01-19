@@ -19,12 +19,10 @@ export function TableContent({
 }) {
   const dispatch = useDispatch();
 
-  // Actions Dropdown
   function handleDropDown(e: any) {
     e.target.nextSibling.classList.toggle("show");
   }
 
-  // Close the dropdown if the user clicks outside of it
   window.onclick = function (e: any) {
     console.log(e.target);
     if (!e.target.matches(".dropbtn")) {
